@@ -7,7 +7,7 @@
     "install": "npm run build",
     "start": "node server.js",
     "dev": "node_modules/.bin/webpack-dev-server --mode=development --config webpack.dev.js",
-    "build": "rm -rf build && node_modules/.bin/webpack -p --mode production --config webpack.prod.js",
+    "build": "rm -rf public && node_modules/.bin/webpack -p --mode production --config webpack.prod.js",
     "lint": "eslint --config ./.eslintrc src --ext .jsx --ext .js",
     "lint:fix": "eslint --config ./.eslintrc src  --ext .jsx --ext .js --fix",
     "scss-lint": "stylelint 'src/**/*.scss' --syntax scss",
@@ -17,11 +17,11 @@
     "test:coverage": "jest --coverage --colors",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "pre-commit": [
-    "precommit-msg",
-    "lint",
-    "scss-lint",
-    "test"
+    "precommit-msg"
   ],
   "repository": {
     "type": "git",

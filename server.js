@@ -10,7 +10,7 @@ const port = process.env.PORT || 6060
 const apiEndPoint = 'https://hungry-bee-cuff.cyclic.app'
 
 app.use(compression())
-app.use(express.static(`${__dirname}/build`))
+app.use(express.static(`${__dirname}/public`))
 
 app.use('/api/**', proxyMiddleware({
   target: apiEndPoint,
@@ -24,7 +24,7 @@ app.use('/api/**', proxyMiddleware({
 }))
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 app.listen(port, () => {

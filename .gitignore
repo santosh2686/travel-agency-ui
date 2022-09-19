@@ -1,0 +1,9 @@
+.idea/
+build/
+coverage/
+node_modules/
+package-lock.json
+.DS_Store
+src/.DS_Store
+src/components/.DS_Store
+npm-debug.log

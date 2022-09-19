@@ -1,0 +1,249 @@
+@import "_constant";
+@import "_mixins";
+
+.input-control {
+  @include transition(border-color ease-in-out 0.2s);
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  height: 40px;
+
+  &.rounded {
+    border-radius: 20px;
+  }
+
+  &.small {
+    height: 30px;
+  }
+
+  &.large {
+    height: 50px;
+  }
+
+  &:focus {
+    border-color: $primary;
+    outline: 0;
+  }
+}
+
+textarea.input-control {
+  height: 100px;
+}
+
+.warning-icon {
+  bottom: 10px;
+  right: 12px;
+}
+
+/*CheckBox*/
+.checkbox-control {
+  label {
+    min-width: 20px;
+    min-height: 20px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid $success;
+      border-radius: 2px;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 7px;
+      content: '';
+      width: 7px;
+      height: 14px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: transparent $white $white transparent;
+      transform: rotate(42deg);
+      display: none;
+    }
+  }
+
+  input {
+    &:checked + label {
+      &:before {
+        background: $success;
+        transition: background linear 0.2s;
+      }
+
+      &:after {
+        display: block;
+      }
+    }
+
+    &:disabled + label {
+      cursor: not-allowed;
+
+      &:before {
+        border-color: $gray-light;
+      }
+    }
+
+    &:disabled:checked + label {
+      &:before {
+        background: $gray-light;
+      }
+    }
+  }
+}
+
+/*Radio*/
+.radio-control {
+  label {
+    min-width: 20px;
+    min-height: 20px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid $success;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      content: '';
+      width: 0;
+      height: 0;
+      background: $success;
+      border-radius: 50%;
+      transition: all linear 0.2s;
+    }
+  }
+
+  input {
+    &:checked + label {
+      &:after {
+        top: 4px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &:disabled + label {
+      cursor: not-allowed;
+
+      &:before {
+        border-color: $gray-light;
+      }
+
+      &:after {
+        background: $gray-light;
+      }
+    }
+  }
+}
+
+.select-box {
+  &:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: 11px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: $gray-dark;
+    z-index: 1;
+  }
+
+  &.disabled {
+    &:after {
+      border-top-color: $gray-light;
+    }
+  }
+
+  select:disabled {
+    opacity: 0.5;
+  }
+}
+
+.select-box-spinner {
+  bottom: 7px;
+  right: 3px;
+}
+
+/* Toggle Switch*/
+.toggle-switch {
+  width: 52px;
+  height: 25px;
+
+  input {
+    &:checked + .toggle-slider:before {
+      @include transform(translateX(26px));
+    }
+  }
+}
+
+.toggle-slider {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $white;
+    @include transition(transform ease 0.3s);
+    border-radius: 50%;
+  }
+}
+
+.file-upload {
+  .btn {
+    border-radius: 0;
+  }
+
+  button {
+    .fa, span {
+      transition: all ease 0.2s;
+    }
+
+    .fa {
+      top: -30px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    span {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    &:hover {
+      .fa {
+        top: 11px;
+      }
+
+      span {
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px);
+      }
+    }
+  }
+}
+

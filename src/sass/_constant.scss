@@ -1,0 +1,45 @@
+$body-bg: #edf1f5;
+
+$black: #000000;
+$gray-darker: #555556;
+$gray-dark: #666666;
+$gray: #878787;
+$gray-light: #dddddd;
+$gray-lighter: #f7f7f9;
+$gray-extra-lighter: #FAFAFA;
+$white: #FFFFFF;
+
+$default: $gray-light;
+$default-light: #dfdfdf;
+
+$success: #2ecd99;
+$success-light: #4BD2A6;
+
+$danger: #ed6f56;
+$danger-light: #ED836D;
+
+$primary: #4e9de6;
+$primary-light: #67AAE7;
+
+$info: #5bc0de;
+$info-light: #31b0d5;
+
+$warning: #f0c541;
+$warning-light: #F0CB5C;
+
+$theme: #2a3e4c;
+$theme-light: #364854;
+
+$extra-large: "(min-width:1200px)";
+
+$large-up: "(min-width: 992px)";
+$large-down: "(max-width: 991px)";
+
+$medium-up: "(min-width: 768px)";
+$medium-only: "(min-width: 768px) and (max-width: 991px)";
+$medium-down: "(max-width: 767px)";
+
+$small-up: "(min-width: 576px)";
+$small-only: "(min-width: 576px) and (max-width: 767px)";
+
+$extra-small-only: "(max-width: 576px)";

@@ -1,0 +1,139 @@
+
+.logo, .brand, .side-bar, .page-container, .nav-toggle:hover i, .navigation li a span, .navigation li div span, .navigation li .expand, ul.sub-navigation {
+  transition: all 0.5s ease;
+}
+
+.logo {
+  width: 45px;
+  font-size: 38px;
+  opacity: 0;
+  height: 60px;
+}
+
+.brand {
+  width: 191px;
+  opacity: 1;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  &:hover i {
+    color: $gray-dark;
+  }
+}
+
+.side-bar {
+  width: 255px;
+}
+
+.page-container {
+  margin-left: 255px;
+}
+
+.navigation {
+  > ul {
+    > li {
+      border-bottom: 1px solid #364854;
+      a {
+        padding: 15px 12px;
+        color: $white;
+        white-space: nowrap;
+        &:global(.active) {
+          color: $success;
+        }
+        &:hover {
+          text-decoration: none;
+          background: #364854;
+        }
+        span {
+          opacity: 1;
+          i {
+            color: $gray;
+          }
+        }
+        .expand {
+          transform: rotate(0deg);
+        }
+      }
+
+      &.open {
+        .expand {
+          transform: rotate(180deg);
+        }
+        ul {
+          max-height: 400px;
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  padding: 15px 12px;
+  cursor: pointer;
+  &:global(.active) div {
+    color: $success;
+  }
+  &:hover {
+    background: #364854;
+  }
+}
+
+ul.sub-navigation {
+  max-height: 0;
+  overflow: hidden;
+  > li {
+    > a {
+      padding: 10px 0 10px 35px;
+      color: $gray;
+      &:global(.active) {
+        color: $gray;
+        background: #364854;
+      }
+    }
+  }
+}
+
+.side-nav-toggle {
+  .logo {
+    opacity: 1;
+  }
+  .brand {
+    width: 0;
+    opacity: 0;
+  }
+  .side-bar {
+    width: 45px;
+  }
+  .page-container {
+    margin-left: 45px;
+  }
+  .navigation li a, .navigation li div {
+    span {
+      opacity: 0;
+    }
+  }
+  .navigation > ul > li.open ul.sub-navigation {
+    display: none;
+  }
+}
+
+.side-nav-hover {
+  .logo {
+    opacity: 0;
+  }
+  .brand {
+    width: 191px;
+    opacity: 1;
+  }
+  .side-bar {
+    width: 255px;
+  }
+  .navigation > ul > li.open ul.sub-navigation {
+    display: block;
+  }
+  .navigation li a span, .navigation li div span {
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,22 @@
+@import "_constant";
+@import "_mixins";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+
+@include grid-col-model('xs');
+
+@include small-up {
+  @include grid-col-model('sm');
+}
+
+@include medium-up {
+  @include grid-col-model('md');
+}
+
+@include large-up {
+  @include grid-col-model('lg');
+}

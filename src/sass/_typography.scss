@@ -1,0 +1,90 @@
+@import "_constant";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.5;
+  color: $gray-darker;
+  height: 100%;
+  background: $body-bg;
+  position: relative;
+  overflow-x: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+.font-8 {
+  font-size: 8px;
+}
+
+.font-10 {
+  font-size: 8px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-22 {
+  font-size: 22px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-28 {
+  font-size: 28px;
+}
+
+.font-32 {
+  font-size: 32px;
+}
+

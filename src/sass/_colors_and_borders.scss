@@ -1,0 +1,99 @@
+@import "_constant";
+
+@mixin model-item($val, $name) {
+  .bg- {
+    &#{$name} {
+      background-color: #{$val};
+    }
+  }
+  .color- {
+    &#{$name} {
+      color: #{$val};
+    }
+  }
+  .bor- {
+    &#{$name} {
+      border: 1px solid #{$val};
+    }
+
+    &tb- {
+      &#{$name} {
+        border-top: 1px solid #{$val};
+        border-bottom: 1px solid #{$val};
+      }
+    }
+
+    &lr- {
+      &#{$name} {
+        border-left: 1px solid #{$val};
+        border-right: 1px solid #{$val};
+      }
+    }
+
+    &t- {
+      &#{$name} {
+        border-top: 1px solid #{$val};
+      }
+    }
+
+    &r- {
+      &#{$name} {
+        border-right: 1px solid #{$val};
+      }
+    }
+
+    &b- {
+      &#{$name} {
+        border-bottom: 1px solid #{$val};
+      }
+    }
+
+    &l- {
+      &#{$name} {
+        border-left: 1px solid #{$val};
+      }
+    }
+  }
+
+  .hover-color-#{$name}:hover {
+    color: #{$val};
+  }
+  .hover-border-color-#{$name}:hover {
+    border-color: #{$val};
+  }
+  .hover-bg-#{$name}:hover {
+    background-color: #{$val};
+  }
+}
+
+@mixin box-model($collection) {
+  @for $i from 0 to length($collection) {
+    $item: nth($collection, $i+1);
+    @include model-item(nth($item, 1), nth($item, 2));
+  }
+}
+
+@include box-model((
+  $theme 'theme',
+  $theme-light 'theme-light',
+  $white 'white',
+  $gray-extra-lighter 'gray-extra-lighter',
+  $gray-lighter 'gray-lighter',
+  $gray-light 'gray-light',
+  $gray 'gray',
+  $gray-dark 'gray-dark',
+  $gray-darker 'gray-darker',
+  $black 'black',
+  $default 'default',
+  $default-light 'default-light',
+  $success 'success',
+  $success-light 'success-light',
+  $danger 'danger',
+  $danger-light 'danger-light',
+  $primary 'primary',
+  $primary-light 'primary-light',
+  $info 'info',
+  $info-light 'info-light',
+  $warning 'warning',
+  $warning-light 'warning-light',
+));

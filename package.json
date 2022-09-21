@@ -4,25 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "install": "npm run build",
-    "start": "node server.js",
-    "dev": "node_modules/.bin/webpack-dev-server --mode=development --config webpack.dev.js",
-    "build": "rm -rf public && node_modules/.bin/webpack -p --mode production --config webpack.prod.js",
-    "lint": "eslint --config ./.eslintrc src --ext .jsx --ext .js",
-    "lint:fix": "eslint --config ./.eslintrc src  --ext .jsx --ext .js --fix",
-    "scss-lint": "stylelint 'src/**/*.scss' --syntax scss",
-    "scss-lint:fix": "stylelint 'src/**/*.scss' --syntax scss --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "start": "node server.js"
   },
   "engines": {
     "node": "16.x"
   },
-  "pre-commit": [
-    "precommit-msg"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://santosh2686@bitbucket.org/travelagencymanagement/travel-agency-ui.git"
@@ -31,65 +17,9 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/travelagencymanagement/travel-agency-ui#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "classnames": "^2.2.6",
     "compression": "^1.7.3",
-    "dayjs": "^1.10.3",
     "express": "^4.16.3",
     "http-proxy-middleware": "^0.18.0",
-    "immutability-helper": "^2.7.1",
-    "jspdf": "^2.5.1",
-    "jspdf-autotable": "^3.5.25",
-    "path": "^0.12.7",
-    "prop-types": "^15.6.1",
-    "query-string": "^6.1.0",
-    "re-reselect": "^3.4.0",
-    "react": "^16.3.2",
-    "react-datepicker": "^3.4.1",
-    "react-dom": "^16.3.2",
-    "react-internationalization": "^1.1.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0",
-    "reselect": "^4.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
-    "@babel/register": "^7.10.3",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.1.0",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.6.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.17.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-sonarjs": "^0.15.0",
-    "eslint-webpack-plugin": "^2.4.1",
-    "file-loader": "^6.1.1",
-    "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.3.0",
-    "jest": "^26.1.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.1",
-    "pre-commit": "^1.2.2",
-    "react-css-modules": "^4.7.11",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1",
-    "stylelint": "^13.8.0",
-    "stylelint-webpack-plugin": "^2.1.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.4.0"
+    "path": "^0.12.7"
   }
 }

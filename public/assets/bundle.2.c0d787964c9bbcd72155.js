@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{530:function(e,n,o){"use strict";o.r(n),n.default={title:"Store Management",common:{welcome:"Welcome to admin panel {{name}}"}}}}]);

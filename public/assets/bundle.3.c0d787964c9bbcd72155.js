@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{531:function(e,n,a){"use strict";a.r(n),n.default={title:"Store Management",common:{welcome:"Bienvenue au gérant du magasin"}}}}]);

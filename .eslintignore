@@ -1,7 +1,0 @@
-/build
-/public
-/node_modules
-/src/base/**/*
-/src/**/*.spec.js
-/index.js
-/src/mock/**/*

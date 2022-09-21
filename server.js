@@ -10,7 +10,25 @@ const port = process.env.PORT || 6060
 const apiEndPoint = 'https://hungry-bee-cuff.cyclic.app'
 
 app.use(compression())
-app.use(express.static(`${__dirname}/public`))
+
+app.use((req, res, next) => {
+  res.set('x-timestamp', Date.now())
+  res.set('x-powered-by', 'cyclic.sh')
+  console.log(`[${new Date().toISOString()}] ${req.ip} ${req.method} ${req.path}`)
+  next()
+})
+
+const options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html', 'css', 'js', 'ico', 'jpg', 'jpeg', 'png', 'svg'],
+  index: ['index.html'],
+  maxAge: '1m',
+  redirect: false,
+}
+app.use(express.static('public', options))
+
+// app.use(express.static(`${__dirname}/public`))
 
 app.use('/api/**', proxyMiddleware({
   target: apiEndPoint,

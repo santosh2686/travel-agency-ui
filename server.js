@@ -10,7 +10,7 @@ const port = process.env.PORT || 6060
 const apiEndPoint = 'https://hungry-bee-cuff.cyclic.app'
 
 app.use(compression())
-
+/*
 app.use((req, res, next) => {
   res.set('x-timestamp', Date.now())
   res.set('x-powered-by', 'cyclic.sh')
@@ -27,8 +27,9 @@ const options = {
   redirect: false,
 }
 app.use(express.static('public', options))
+*/
 
-// app.use(express.static(`${__dirname}/public`))
+app.use(express.static(`${__dirname}/public`))
 
 app.use('/api/**', proxyMiddleware({
   target: apiEndPoint,
